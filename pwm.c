@@ -1,7 +1,6 @@
 #include "pwm.h"
 
-int pwm(unsigned int intPin, unsigned int per_microseconds, float dutyCycle, 
-unsigned int cycles) {
+int pwm(unsigned int intPin, unsigned int per_microseconds, float dutyCycle, unsigned int cycles) {
 
 	unsigned int t_high;
 	unsigned int i;	
