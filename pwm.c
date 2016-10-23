@@ -1,16 +1,16 @@
 #include "pwm.h"
 
-int pwm(unsigned int intPin, unsigned int per_microseconds, float *dutyCycle, 
+int pwm(unsigned int intPin, unsigned int per_microseconds, float dutyCycle, 
 unsigned int cycles) {
-	
+
 	unsigned int t_high;
 	unsigned int i;	
 
-	t_high = (int)(*dutyCycle * (float)per_microseconds);
+	t_high = (int)(dutyCycle * (float)per_microseconds);
 	i = 0;
 	printf("Pin %d\n",intPin);
 	printf("t_high %d\n",t_high);
-	printf("duty %f\n",*dutyCycle);
+	printf("duty %f\n",dutyCycle);
 	printf("period %d\n",per_microseconds);
 	printf("cycles %d\n",cycles);
 	
@@ -27,7 +27,6 @@ unsigned int cycles) {
 }
 
 int an_aus(unsigned int intPin, unsigned int per_microseconds, unsigned int t_high) {
-	
 	if (t_high > per_microseconds)
 		return -1;
 
